@@ -43,6 +43,17 @@ make -f toolchain.mk toolchains
 
 make -f qemu.mk all
 
-  make -f qemu.mk run-only
+make -f qemu.mk run-only
 
 ```
+### 遇到如下错误
+
+ImportError: No module named wand.image make[1]: *** [out/arm/ta_arm32-libbutee/tui/default_bold.c] Error 1
+
+解决方法：apt-get install libmagickwand-dev and python-wand
+
+(qemu) qemu-system-arm: cannot set up guest memory 'xxx.ram': Cannot a
+
+解决方法：增加虚拟机内存
+
+
